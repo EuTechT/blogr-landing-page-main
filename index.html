@@ -6,6 +6,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/style.css">
+
+  <script src="./src/scripts/menu-toggle.js" defer></script>
   <title>Frontend Mentor | [Blogr]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,35 +21,92 @@
   </style>
 </head>
 <body>
-  Product
+  <header class="header">
+    <div class="header-1">
+      <div class="logo">
+        <img src="./src/images/logo.svg" alt="Logo - Blogr">
+      </div>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+      <button id="btn-menu" class="btn-menu">
+        <img class="menu-icon" src="./src/images/icon-hamburger.svg" alt="Open">
+      </button>
 
-  Company
+      <nav class="navigation">
+        <ul class="menu">
+          <li>
+            <a class="navlink" href="#">Product <img src="./src/images/icon-arrow-dark.svg" alt=""></a>
+            <ul class="submenu">
+              <li><a class="navlink" href="#">Overview</a></li>
+              <li><a class="navlink" href="#">Pricing</a></li>
+              <li><a class="navlink" href="#">Marketplace</a></li>
+              <li><a class="navlink" href="#">Features</a></li>
+              <li><a class="navlink" href="#">Integrations</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="navlink" href="#">Company <img src="./src/images/icon-arrow-dark.svg" alt=""></a>
+            <ul class="submenu">
+              <li><a class="navlink" href="#">About</a></li>
+              <li><a class="navlink" href="#">Team</a></li>
+              <li><a class="navlink" href="#">Blog</a></li>
+              <li><a class="navlink" href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="navlink" href="#">Connect <img src="./src/images/icon-arrow-dark.svg" alt=""></a>
+            <ul class="submenu">
+              <li><a class="navlink" href="#">Contact</a></li>
+              <li><a class="navlink" href="#">Newsletter</a></li>
+              <li><a class="navlink" href="#">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
 
-  About
-  Team
-  Blog
-  Careers
+        <div class="account">
+          <button class="btn btn-black">
+            Login
+          </button>
+          <button class="btn btn-linear-red">
+            Sign Up
+          </button>
+        </div>
+      </nav>
+    </div>
 
-  Connect
+    <div class="card">
+      <h1 class="title-1">
+        A modern publishing platform
+      </h1>
+      <p class="paragraph">
+        Grow your audience and build your online brand
+      </p>
+    </div>
 
-  Contact
-  Newsletter
-  LinkedIn
+    <div class="buttons">
+      <button class="btn btn-white">
+        Start for Free
+      </button>
+      <button class="btn">
+        Learn More
+      </button>
+    </div>
+
+    <!--<img class="bg-pattern-intro" src="./src/images/bg-pattern-intro.svg" alt="Bg Pattern Intro">-->
+  </header>
+
+  <main class="main">
+    section.
+  </main>
   
-  Login
-  Sign Up
+  <footer class="footer">
 
-  A modern publishing platform
-  Grow your audience and build your online brand
+  </footer>
 
-  Start for Free
-  Learn More
+  
+ 
+
+  
+  
 
   Designed for the future
 
