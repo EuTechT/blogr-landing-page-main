@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
@@ -161,34 +161,44 @@
   
   <footer class="footer">
     <div class="footer-1">
-      
-      Product
+      <div class="logo">
+        <img src="./src/images/logo.svg" alt="Logo - Blogr">
+      </div>
 
-      Overview
-      Pricing
-      Marketplace
-      Features
-      Integrations
-
-      
-      Company
-
-      About
-      Team
-      Blog
-      Careers
-
-      
-      Connect
-      
-      Contact
-      Newsletter
-      LinkedIn
-
+      <nav class="footer__navigation">
+        <ul class="footer__menu">
+          <li>
+            <a class="navlink" href="#">Product</a>
+            <ul class="footer__submenu">
+              <li><a class="navlink" href="#">Overview</a></li>
+              <li><a class="navlink" href="#">Pricing</a></li>
+              <li><a class="navlink" href="#">Marketplace</a></li>
+              <li><a class="navlink" href="#">Features</a></li>
+              <li><a class="navlink" href="#">Integrations</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="navlink" href="#">Company</a>
+            <ul class="footer__submenu">
+              <li><a class="navlink" href="#">About</a></li>
+              <li><a class="navlink" href="#">Team</a></li>
+              <li><a class="navlink" href="#">Blog</a></li>
+              <li><a class="navlink" href="#">Careers</a></li> 
+            </ul>
+          </li>
+          <li>
+            <a class="navlink" href="#">Connect</a>
+            <ul class="footer__submenu">
+              <li><a class="navlink" href="#">Contact</a></li>
+              <li><a class="navlink" href="#">Newsletter</a></li>
+              <li><a class="navlink" href="#">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
   </footer>  
 
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/eutecht" target="_blank">André Filipe</a>.
