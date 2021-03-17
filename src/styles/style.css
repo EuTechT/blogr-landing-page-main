@@ -30,19 +30,39 @@ a {
     position: relative;
 }
 
+.img-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    background-image: url("../images/bg-pattern-intro.svg");
+    background-size: 350%;
+    background-position: 35% 40%;
+    border-bottom-left-radius: 5.2rem;
+}
+
 .header-1 {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*position: relative;
-    z-index: 100;*/
+    position: relative;
+    z-index: 200;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .navigation {
     width: 90%;
+    max-width: 1440px;
     max-height: 0;
     overflow: hidden;
     padding: 0 2rem;
@@ -50,15 +70,16 @@ a {
     border-radius: 10px;
     position: absolute;
     left: 50%;
-    top: 8rem;
+    top: 6rem;
     right: 0;
+    z-index: 200;
 
     transform: translateX(-50%);
 
-    transition: max-height 0.3s linear;
+    transition: max-height 0.2s linear;
 }
 
-.navigation-active {
+.navigation--active {
     max-height: 1000px;
 }
 
@@ -92,10 +113,31 @@ a {
     background-color: hsl(240, 2%, 79%);
     border-radius: 10px;
 
-    transition: max-height 0.3s linear;
+    transition: max-height 0.2s linear;
 }
 
-.submenu-active {
+.submenu li:nth-child(1) {
+    margin-top: 1rem;
+}
+
+.submenu li:last-child {
+    margin-bottom: 1rem;
+}
+
+.submenu .navlink {
+    color: hsl(207, 13%, 34%)
+}
+
+.img-link {
+    transition: transform 0.3s;
+}
+
+.img-link--active {
+    transform: rotate(-180deg);
+    transition: transform 0.3s;
+}
+
+.submenu--active {
     max-height: 800px;
 }
 
@@ -120,23 +162,14 @@ a {
     flex-direction: column;
     align-items: center;
     
-    /*position: relative;
-    z-index: 100;*/
+    position: relative;
+    z-index: 100;
 }
 
 .header .card {
     margin-top: 6rem;
     padding: 0 0.2rem;
 }
-
-/*.bg-pattern-intro {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-}*/
 
 .title-1 {
     font-size: 2.2rem;
@@ -146,7 +179,6 @@ a {
 
 .paragraph {
     font-size: 1.2rem;
-    font-weight: 300;
     color: #fff;
     text-align: center;
     margin-top: 1rem;
@@ -160,8 +192,8 @@ a {
     justify-content: space-around;
     align-items: center;
 
-    /*position: relative;
-    z-index: 100;*/
+    position: relative;
+    z-index: 100;
 }
 
 .btn {
@@ -174,6 +206,7 @@ a {
     font-weight: 600;
     color: #fff;
     cursor: pointer;
+    outline: none;
 }
 
 .btn-white {
@@ -190,4 +223,78 @@ a {
     color: #fff;
     border: none;
     background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
+
+.grid {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 4rem 1.6rem 6rem;
+    display: grid;
+    place-items: center;
+}
+
+.title-2 {
+    font-size: 2rem;
+    text-align: center;
+    color: hsl(240, 10%, 16%);
+    margin-bottom: 2rem;
+}
+
+.title-3 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: hsl(240, 10%, 16%);
+}
+
+.grid .card {
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.grid .title-3 {
+    width: 80%;
+}
+
+.grid .paragraph {
+    color: hsl(207, 13%, 34%);
+}
+
+.img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.section-bg {
+    background-color: hsl(237, 17%, 21%);
+    padding: 13rem 1.6rem 8rem;
+    border-radius: 0 5.2rem 0;
+    margin-top: 8rem;
+    background-image: url("../images/bg-pattern-circles.svg");
+    background-size: 150%;
+    background-position: 50% -525%;
+    background-repeat: no-repeat;
+}
+
+.flex {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-bg .img {
+    position: absolute;
+    top: -360px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer {
+    padding: 3.6rem 1.6rem;
+    background-color: hsl(240, 10%, 16%);
+    border-top-right-radius: 5.2rem;
+}
+
+.footer-1 {
+    max-width: 1440px;
+    margin: 0 auto;
 }
