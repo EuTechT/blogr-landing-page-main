@@ -104,8 +104,17 @@ a {
     font-weight: 600;
 }
 
-.navlink img {
+.img-link {
     margin-left: 0.2rem;
+    transition: transform 0.3s;
+}
+
+.navlink-menu--active {
+    color: hsl(207, 13%, 34%);
+}
+
+.img-link--active {
+    transform: rotate(-180deg);
 }
 
 .submenu {
@@ -127,16 +136,7 @@ a {
 }
 
 .submenu .navlink {
-    color: hsl(207, 13%, 34%)
-}
-
-.img-link {
-    transition: transform 0.3s;
-}
-
-.img-link--active {
-    transform: rotate(-180deg);
-    transition: transform 0.3s;
+    color: hsl(207, 13%, 34%);
 }
 
 .submenu--active {
