@@ -5,7 +5,6 @@ const navlinkMenu = window.document.querySelectorAll('.navlink-menu');
 
 btnMenu.addEventListener('click', (e) => {
     navigation.classList.toggle('navigation--active');
-
     menuIcon.src = changeIcon(menuIcon.getAttribute('src'));
 });
 
@@ -35,3 +34,14 @@ navlinkMenu.forEach((link, index, arrayLinks) => {
         }
     });
 });
+
+window.onresize = function() {
+    closeNavigation();
+};
+
+function closeNavigation() {
+    if(window.innerWidth > 1024 && navigation.className == 'navigation navigation--active') {
+        navigation.classList.remove('navigation--active');
+        menuIcon.src = changeIcon(menuIcon.getAttribute('src'));
+    }
+}
