@@ -1,20 +1,22 @@
 const btnMenu = window.document.querySelector('#btn-menu');
 const navigation = window.document.querySelector('.navigation');
-const menuIcon = window.document.querySelector('.menu-icon');
+/*const menuIcon = window.document.querySelector('.menu-icon');*/
 const navlinkMenu = window.document.querySelectorAll('.navlink-menu');
 
 btnMenu.addEventListener('click', (e) => {
     navigation.classList.toggle('navigation--active');
-    menuIcon.src = changeIcon(menuIcon.getAttribute('src'));
+    /*menuIcon.src = changeIcon(menuIcon.getAttribute('src'));*/
+
+    btnMenu.classList.toggle('btn-menu--active');
 });
 
-function changeIcon(icon) {
+/*function changeIcon(icon) {
     if(icon == './src/images/icon-hamburger.svg') {
         return './src/images/icon-close.svg';
     } else {
         return './src/images/icon-hamburger.svg';
     }
-}
+}*/
 
 navlinkMenu.forEach((link, index, arrayLinks) => {
     link.addEventListener('click', (event) => {
@@ -42,6 +44,8 @@ window.onresize = function() {
 function closeNavigation() {
     if(window.innerWidth > 1024 && navigation.className == 'navigation navigation--active') {
         navigation.classList.remove('navigation--active');
-        menuIcon.src = changeIcon(menuIcon.getAttribute('src'));
+        /*menuIcon.src = changeIcon(menuIcon.getAttribute('src'));*/
+
+        btnMenu.classList.remove('btn-menu--active');
     }
 }
