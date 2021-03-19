@@ -82,7 +82,7 @@ a {
 }
 
 .navigation--active {
-    max-height: 1000px;
+    max-height: 2000px;
 }
 
 .menu {
@@ -202,8 +202,8 @@ a {
     width: 138px;
     height: 48px;
     background: none;
-    border: 1px solid #fff;
     border-radius: 30px;
+    border: none;
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
@@ -213,18 +213,37 @@ a {
 
 .btn-white {
     background-color: #fff;
-    color: hsl(353, 100%, 62%);
+    color: hsl(356, 100%, 66%);
+}
+
+.btn-transparent {
+    border: 1px solid #fff;
 }
 
 .btn-black {
-    border: none;
     color: #000;
 }
 
 .btn-linear-red {
     color: #fff;
-    border: none;
     background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+}
+
+.btn-white:hover {
+    color: #fff;
+    background-color: hsl(355, 100%, 74%);
+    transition: all 0.5s linear;
+}
+
+.btn-transparent:hover {
+    color: hsl(356, 100%, 66%);
+    background-color: #fff;
+    transition: all 0.5s linear;
+}
+
+.btn-linear-red:hover {
+    background-image: linear-gradient(to right, hsl(355, 100%, 74%), hsl(355, 100%, 74%));
+    transition: all 0.5s linear;
 }
 
 .grid {
@@ -263,7 +282,7 @@ a {
 
 .img {
     width: 100%;
-    max-width: 325px;
+    max-width: 375px;
 }
 
 .section-bg {
@@ -271,23 +290,29 @@ a {
     padding: 13rem 1.6rem 8rem;
     border-radius: 0 5.2rem 0;
     margin-top: 8rem;
+    position: relative;
     background-image: url("../images/bg-pattern-circles.svg");
-    background-size: 150%;
-    background-position: 50% -525%;
     background-repeat: no-repeat;
+    background-position: 50% -255px;
+    background-size: cover;
 }
 
 .flex {
     max-width: 1440px;
     margin: 0 auto;
+}
+
+.flex__img {
     position: relative;
 }
 
-.section-bg .img {
+.flex__img .img {
     position: absolute;
-    top: -360px;
+    top: -380px;
     left: 50%;
     transform: translateX(-50%);
+
+    z-index: 10;
 }
 
 .footer {
@@ -327,7 +352,16 @@ a {
     color: #fff;
 }
 
+.footer__submenu {
+    margin-top: 1rem;
+}
+
 .footer__submenu .navlink {
     padding: 0;
     color: hsl(240, 2%, 79%);
+}
+
+.footer__submenu .navlink:hover {
+    text-decoration: underline;
+    transition: all 0.5s linear;
 }

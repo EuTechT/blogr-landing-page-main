@@ -17,27 +17,15 @@ function changeIcon(icon) {
     }
 }
 
-navlinkMenu.forEach((link, i) => {
-    link.addEventListener('click', (e) => {
+navlinkMenu.forEach((link, index, arrayLinks) => {
+    link.addEventListener('click', (event) => {
         const submenus = window.document.querySelectorAll('.submenu');
+        submenus[index].classList.toggle('submenu--active');
 
-
-        submenus[i].classList.toggle('submenu--active');
-
-        if(e.target == navlinkMenu[0]) {
-            submenus[1].classList.remove('submenu--active');
-            submenus[2].classList.remove('submenu--active');
-        } else if (e.target == navlinkMenu[1]) {
-            submenus[0].classList.remove('submenu--active');
-            submenus[2].classList.remove('submenu--active');
-        } else {
-            submenus[0].classList.remove('submenu--active');
-            submenus[1].classList.remove('submenu--active');
+        for(let i = 0; i < arrayLinks.length; i++){
+            if(event.target != arrayLinks[i] && submenus[i].className == 'submenu submenu--active') {
+                submenus[i].classList.remove('submenu--active');
+            }
         }
-
     });
 });
-
-/*function closeLink(link) {
-    console.log(link)
-}*/
