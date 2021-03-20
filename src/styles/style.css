@@ -78,7 +78,7 @@ a {
 
     transform: translateX(-50%);
 
-    transition: max-height 0.2s linear;
+    transition: max-height 0.25s linear;
 }
 
 .navigation--active {
@@ -104,9 +104,17 @@ a {
     font-weight: 600;
 }
 
-.img-link {
+.img-link-light {
+    display: none;
+}
+
+.img-link-dark, .img-link-light {
     margin-left: 0.2rem;
     transition: transform 0.3s;
+}
+
+.navlink-menu img {
+    margin-left: 0.6rem;
 }
 
 .navlink-menu--active {
@@ -171,7 +179,7 @@ a {
     height: 3px;
 
     background-color: #fff;
-    transition: all 0.2s linear;
+    transition: all 0.25s linear;
 }
 
 .btn-menu--active {
@@ -281,6 +289,176 @@ a {
 .btn-linear-red:hover {
     background-image: linear-gradient(to right, hsl(355, 100%, 74%), hsl(355, 100%, 74%));
     transition: all 0.5s linear;
+}
+
+@media all and (min-width: 1024px) {   
+    .btn-menu {
+        display: none;
+    }
+
+    .navigation {
+        max-width: unset;
+        max-height: unset;
+        overflow: unset;
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: unset;
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        transform: translateX(0);
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        padding: 0;
+        margin-left: 2rem;
+        border-bottom: unset;
+        display: flex;
+    }
+
+    .menu > .list-item {
+        margin-left: 1rem;
+    }
+
+    .navlink {
+        color: #fff;
+        padding: 0.8rem 0.2rem;
+    }
+
+    .img-link-dark {
+        display: none;
+    }
+
+    .img-link-light {
+        display: inline-block;
+    }
+
+    .navlink-menu--active {
+        color: hsl(207, 13%, 34%);
+    }
+
+    .submenu {
+        position: absolute;
+        background-color: #fff;
+    }
+
+    .submenu li:nth-child(1) {
+        margin-top: 1rem;
+    }
+
+    .submenu li:last-child {
+        margin-bottom: 1rem;
+    }
+
+    .submenu .navlink {
+        color: hsl(207, 13%, 34%);
+    }
+
+    .submenu--active {
+        max-height: 800px;
+    }
+
+    .account {
+        padding: 1rem 0 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        position: relative;
+        z-index: 100;
+    }
+
+    .header .card {
+        margin-top: 6rem;
+        padding: 0 0.2rem;
+    }
+
+    .title-1 {
+        font-size: 2.2rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    .paragraph {
+        font-size: 1.2rem;
+        color: #fff;
+        text-align: center;
+        margin-top: 1rem;
+        
+    }
+
+    .buttons {
+        max-width: 300px;
+        margin: 3rem auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        position: relative;
+        z-index: 100;
+    }
+
+    .btn {
+        width: 138px;
+        height: 48px;
+        background: none;
+        border-radius: 30px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .btn-white {
+        background-color: #fff;
+        color: hsl(356, 100%, 66%);
+    }
+
+    .btn-transparent {
+        border: 1px solid #fff;
+    }
+
+    .btn-black {
+        color: #000;
+    }
+
+    .btn-linear-red {
+        color: #fff;
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    }
+
+    .btn-white:hover {
+        color: #fff;
+        background-color: hsl(355, 100%, 74%);
+        transition: all 0.5s linear;
+    }
+
+    .btn-transparent:hover {
+        color: hsl(356, 100%, 66%);
+        background-color: #fff;
+        transition: all 0.5s linear;
+    }
+
+    .btn-linear-red:hover {
+        background-image: linear-gradient(to right, hsl(355, 100%, 74%), hsl(355, 100%, 74%));
+        transition: all 0.5s linear;
+    }
 }
 
 .grid {
