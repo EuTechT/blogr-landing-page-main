@@ -1,13 +1,13 @@
 const btnMenu = window.document.querySelector('#btn-menu');
 const navigation = window.document.querySelector('.navigation');
-const navlinkMenu = window.document.querySelectorAll('.navlink-menu');
+/*const navlinkMenu = window.document.querySelectorAll('.navlink-menu');*/
 
 btnMenu.addEventListener('click', (e) => {
     navigation.classList.toggle('navigation--active');
     btnMenu.classList.toggle('btn-menu--active');
 });
 
-navlinkMenu.forEach((link, index, arrayLinks) => {
+/*navlinkMenu.forEach((link, index, arrayLinks) => {
     link.addEventListener('click', (event) => {
         const submenus = window.document.querySelectorAll('.submenu');
         const imgsLinksDarks = window.document.querySelectorAll('.img-link-dark');
@@ -27,7 +27,7 @@ navlinkMenu.forEach((link, index, arrayLinks) => {
             }
         }
     });
-});
+});*/
 
 window.onresize = function() {
     closeNavigation();
@@ -36,6 +36,6 @@ window.onresize = function() {
 function closeNavigation() {
     if(window.innerWidth > 1024 && navigation.className == 'navigation navigation--active') {
         navigation.classList.remove('navigation--active');
-        btnMenu.classList.remove('btn-menu--active');
+        /*btnMenu.classList.remove('btn-menu--active');*/
     }
 }
