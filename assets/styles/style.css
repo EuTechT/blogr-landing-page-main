@@ -292,6 +292,7 @@ a {
         max-height: unset;
         overflow: unset;
         padding: 0;
+        margin-left: 2rem;
         background-color: transparent;
         border-radius: 0;
         box-shadow: unset;
@@ -307,7 +308,6 @@ a {
 
     .menu {
         padding: 0;
-        margin-left: 2rem;
         border-bottom: unset;
         display: flex;
     }
